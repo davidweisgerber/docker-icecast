@@ -8,6 +8,7 @@ VOLUME /data
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install icecast2 ezstream psmisc -y
 RUN apt-get clean
+RUN rm -rf /usr/share/icecast2/*
 
 COPY  startup.sh       /startup.sh
 
