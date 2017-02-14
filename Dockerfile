@@ -1,6 +1,7 @@
-FROM ubuntu:latest
+FROM ubuntu:16.10
 
 EXPOSE 8000
+EXPOSE 8001
 
 VOLUME /data
 
