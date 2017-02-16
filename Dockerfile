@@ -14,7 +14,7 @@ RUN git clone --recursive https://git.xiph.org/icecast-server.git && cd icecast-
 
 RUN rm -rf /usr/share/icecast2/* && rm -rf /icecast-server
 
-RUN useradd -ms /bin/bash icecast2 && groupadd icecast
+RUN useradd -ms /bin/bash icecast2 && groupadd icecast && mkdir /var/log/icecast2 && chown icecast2:icecast /var/log/icecast2
 COPY  startup.sh       /startup.sh
 
 RUN chmod 700 /startup.sh
